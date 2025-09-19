@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>نموذج تقييم المقابلات الذكي</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- شريط التنقل العلوي -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-clipboard-check me-2"></i>
+                    نموذج تقييم المقابلات الذكي
+                </a>
+                <button class="btn btn-outline-light ms-auto">
+                    <i class="fas fa-user-plus"></i> مرشح جديد
+                </button>
+            </div>
+        </nav>
+
+        <!-- محتوى التطبيق الرئيسي -->
+        <div class="main-content">
+            <!-- بطاقة معلومات المرشح -->
+            <div class="card candidate-card">
+                <div class="card-body">
+                    <h5 class="card-title">معلومات المرشح</h5>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="candidateName" class="form-label">اسم المرشح</label>
+                            <input type="text" class="form-control" id="candidateName" placeholder="أدخل اسم المرشح">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="position" class="form-label">الوظيفة المتقدم لها</label>
+                            <input type="text" class="form-control" id="position" placeholder="أدخل اسم الوظيفة">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="interviewDate" class="form-label">تاريخ المقابلة</label>
+                            <input type="date" class="form-control" id="interviewDate">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="interviewer" class="form-label">اسم المقيّم</label>
+                            <input type="text" class="form-control" id="interviewer" placeholder="أدخل اسم المقيّم">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بطاقة التقييم -->
+            <div class="card evaluation-card">
+                <div class="card-body">
+                    <h5 class="card-title">التقييم الرقمي</h5>
+                    <p class="card-subtitle mb-3">قيّم المرشح في المعايير التالية من 1 إلى 5</p>
+
+                    <!-- قسم المهارات التقنية -->
+                    <div class="evaluation-section">
+                        <h6 class="section-title">
+                            <i class="fas fa-cogs me-2"></i>
+                            المهارات التقنية (40%)
+                        </h6>
+                        <div class="criteria-item">
+                            <div class="criteria-name">المعرفة التقنية بمجال العمل</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="technical">1</button>
+                                <button class="rating-btn" data-value="2" data-category="technical">2</button>
+                                <button class="rating-btn" data-value="3" data-category="technical">3</button>
+                                <button class="rating-btn" data-value="4" data-category="technical">4</button>
+                                <button class="rating-btn" data-value="5" data-category="technical">5</button>
+                            </div>
+                        </div>
+                        <div class="criteria-item">
+                            <div class="criteria-name">الخبرة العملية السابقة</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="technical">1</button>
+                                <button class="rating-btn" data-value="2" data-category="technical">2</button>
+                                <button class="rating-btn" data-value="3" data-category="technical">3</button>
+                                <button class="rating-btn" data-value="4" data-category="technical">4</button>
+                                <button class="rating-btn" data-value="5" data-category="technical">5</button>
+                            </div>
+                        </div>
+                        <div class="criteria-item">
+                            <div class="criteria-name">المهارات الحاسوبية</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="technical">1</button>
+                                <button class="rating-btn" data-value="2" data-category="technical">2</button>
+                                <button class="rating-btn" data-value="3" data-category="technical">3</button>
+                                <button class="rating-btn" data-value="4" data-category="technical">4</button>
+                                <button class="rating-btn" data-value="5" data-category="technical">5</button>
+                            </div>
+                        </div>
+                        <div class="criteria-item">
+                            <div class="criteria-name">القدرة على حل المشكلات</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="technical">1</button>
+                                <button class="rating-btn" data-value="2" data-category="technical">2</button>
+                                <button class="rating-btn" data-value="3" data-category="technical">3</button>
+                                <button class="rating-btn" data-value="4" data-category="technical">4</button>
+                                <button class="rating-btn" data-value="5" data-category="technical">5</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم المهارات السلوكية -->
+                    <div class="evaluation-section">
+                        <h6 class="section-title">
+                            <i class="fas fa-users me-2"></i>
+                            المهارات السلوكية (35%)
+                        </h6>
+                        <div class="criteria-item">
+                            <div class="criteria-name">مهارات التواصل</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="behavioral">1</button>
+                                <button class="rating-btn" data-value="2" data-category="behavioral">2</button>
+                                <button class="rating-btn" data-value="3" data-category="behavioral">3</button>
+                                <button class="rating-btn" data-value="4" data-category="behavioral">4</button>
+                                <button class="rating-btn" data-value="5" data-category="behavioral">5</button>
+                            </div>
+                        </div>
+                        <div class="criteria-item">
+                            <div class="criteria-name">العمل ضمن فريق</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="behavioral">1</button>
+                                <button class="rating-btn" data-value="2" data-category="behavioral">2</button>
+                                <button class="rating-btn" data-value="3" data-category="behavioral">3</button>
+                                <button class="rating-btn" data-value="4" data-category="behavioral">4</button>
+                                <button class="rating-btn" data-value="5" data-category="behavioral">5</button>
+                            </div>
+                        </div>
+                        <div class="criteria-item">
+                            <div class="criteria-name">المبادرة والدافعية</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="behavioral">1</button>
+                                <button class="rating-btn" data-value="2" data-category="behavioral">2</button>
+                                <button class="rating-btn" data-value="3" data-category="behavioral">3</button>
+                                <button class="rating-btn" data-value="4" data-category="behavioral">4</button>
+                                <button class="rating-btn" data-value="5" data-category="behavioral">5</button>
+                            </div>
+                        </div>
+                        <div class="criteria-item">
+                            <div class="criteria-name">القدرة على التكيف</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="behavioral">1</button>
+                                <button class="rating-btn" data-value="2" data-category="behavioral">2</button>
+                                <button class="rating-btn" data-value="3" data-category="behavioral">3</button>
+                                <button class="rating-btn" data-value="4" data-category="behavioral">4</button>
+                                <button class="rating-btn" data-value="5" data-category="behavioral">5</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم التوافق الثقافي -->
+                    <div class="evaluation-section">
+                        <h6 class="section-title">
+                            <i class="fas fa-building me-2"></i>
+                            التوافق الثقافي (15%)
+                        </h6>
+                        <div class="criteria-item">
+                            <div class="criteria-name">التوافق مع قيم الشركة</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="cultural">1</button>
+                                <button class="rating-btn" data-value="2" data-category="cultural">2</button>
+                                <button class="rating-btn" data-value="3" data-category="cultural">3</button>
+                                <button class="rating-btn" data-value="4" data-category="cultural">4</button>
+                                <button class="rating-btn" data-value="5" data-category="cultural">5</button>
+                            </div>
+                        </div>
+                        <div class="criteria-item">
+                            <div class="criteria-name">الاهتمام بالشركة ومجالها</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="cultural">1</button>
+                                <button class="rating-btn" data-value="2" data-category="cultural">2</button>
+                                <button class="rating-btn" data-value="3" data-category="cultural">3</button>
+                                <button class="rating-btn" data-value="4" data-category="cultural">4</button>
+                                <button class="rating-btn" data-value="5" data-category="cultural">5</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم الانطباع العام -->
+                    <div class="evaluation-section">
+                        <h6 class="section-title">
+                            <i class="fas fa-star me-2"></i>
+                            الانطباع العام (10%)
+                        </h6>
+                        <div class="criteria-item">
+                            <div class="criteria-name">الانطباع العام عن المرشح</div>
+                            <div class="rating-buttons">
+                                <button class="rating-btn" data-value="1" data-category="impression">1</button>
+                                <button class="rating-btn" data-value="2" data-category="impression">2</button>
+                                <button class="rating-btn" data-value="3" data-category="impression">3</button>
+                                <button class="rating-btn" data-value="4" data-category="impression">4</button>
+                                <button class="rating-btn" data-value="5" data-category="impression">5</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- قسم الملاحظات -->
+                    <div class="evaluation-section">
+                        <h6 class="section-title">
+                            <i class="fas fa-comment-alt me-2"></i>
+                            ملاحظات إضافية
+                        </h6>
+                        <textarea class="form-control" id="notes" rows="3" placeholder="أضف ملاحظاتك هنا..."></textarea>
+                    </div>
+
+                    <!-- زر الحساب -->
+                    <div class="text-center mt-4">
+                        <button id="calculateBtn" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calculator me-2"></i>
+                            حساب النتيجة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بطاقة النتائج (مخفية في البداية) -->
+            <div class="card results-card" id="resultsCard" style="display: none;">
+                <div class="card-body">
+                    <h5 class="card-title">نتائج التقييم</h5>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="result-summary">
+                                <div class="final-score-container">
+                                    <div class="final-score" id="finalScore">0%</div>
+                                    <div class="final-rating" id="finalRating">-</div>
+                                </div>
+                                
+                                <div class="recommendation-box" id="recommendationBox">
+                                    <h6>التوصية:</h6>
+                                    <p id="recommendation">يرجى إكمال التقييم</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart-container">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="detailed-results">
+                        <h6>النتائج التفصيلية:</h6>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>الفئة</th>
+                                    <th>النتيجة</th>
+                                    <th>الوزن</th>
+                                    <th>النتيجة المرجحة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>المهارات التقنية</td>
+                                    <td id="technicalScore">0%</td>
+                                    <td>40%</td>
+                                    <td id="technicalWeighted">0%</td>
+                                </tr>
+                                <tr>
+                                    <td>المهارات السلوكية</td>
+                                    <td id="behavioralScore">0%</td>
+                                    <td>35%</td>
+                                    <td id="behavioralWeighted">0%</td>
+                                </tr>
+                                <tr>
+                                    <td>التوافق الثقافي</td>
+                                    <td id="culturalScore">0%</td>
+                                    <td>15%</td>
+                                    <td id="culturalWeighted">0%</td>
+                                </tr>
+                                <tr>
+                                    <td>الانطباع العام</td>
+                                    <td id="impressionScore">0%</td>
+                                    <td>10%</td>
+                                    <td id="impressionWeighted">0%</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="3">النتيجة الإجمالية</td>
+                                    <td id="totalScore">0%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- أزرار العمليات مع التصميم الجديد -->
+                    <div class="action-buttons">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-2">
+                                <button class="btn btn-success w-100">
+                                    <i class="fas fa-file-pdf me-2"></i>
+                                    تصدير كـ PDF
+                                </button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button class="btn btn-info w-100">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    إرسال بالبريد الإلكتروني
+                                </button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button class="btn btn-secondary w-100" id="newEvaluationBtn">
+                                    <i class="fas fa-plus me-2"></i>
+                                    تقييم جديد
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- شريط النتيجة الإجمالية -->
+                    <div class="total-result-bar mt-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5>النتيجة الإجمالية</h5>
+                            <h5 id="totalScoreDisplay">73%</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal للإرسال بالبريد الإلكتروني -->
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailModalLabel">إرسال التقرير بالبريد الإلكتروني</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="recipientEmail" class="form-label">البريد الإلكتروني للمستلم</label>
+                        <input type="email" class="form-control" id="recipientEmail" placeholder="أدخل البريد الإلكتروني">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailSubject" class="form-label">الموضوع</label>
+                        <input type="text" class="form-control" id="emailSubject" value="تقرير تقييم المقابلة">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailMessage" class="form-label">الرسالة</label>
+                        <textarea class="form-control" id="emailMessage" rows="3">مرفق تقرير تقييم المقابلة للمرشح.</textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary">إرسال</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- إضافة مكتبات JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- إضافة الخطوط العربية لـ jsPDF -->
+    <script>
+        // تحميل الخط العربي عند بدء التطبيق
+        window.addEventListener('DOMContentLoaded', function() {
+            // إضافة الخط العربي لـ jsPDF (سيتم استخدامه في ملف pdf_email.js)
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/@parallaxmedia/jspdf-arabic-text@latest/dist/jspdf.arabic-text.js';
+            document.head.appendChild(script);
+        });
+    </script>
+    
+    <!-- إضافة ملفات JavaScript الخاصة بالتطبيق -->
+    <script src="script.js"></script>
+    <script src="pdf_email.js"></script>
+</body>
+</html>
